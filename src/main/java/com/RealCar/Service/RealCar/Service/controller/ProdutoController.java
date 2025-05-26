@@ -5,6 +5,7 @@ import com.RealCar.Service.RealCar.Service.Service.Produto;
 import com.RealCar.Service.RealCar.Service.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -12,6 +13,12 @@ import java.util.List;
 @RequestMapping(value = "/produtos")
 @CrossOrigin("*") // Permite chamadas do frontend
 public class ProdutoController {
+
+    @GetMapping("/estoque")
+    public ModelAndView getList() {
+        ModelAndView mv = new ModelAndView("index");
+        return mv;
+    }
 
     @Autowired
     private final ProdutoRepository repository;
