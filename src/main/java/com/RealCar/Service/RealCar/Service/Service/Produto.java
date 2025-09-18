@@ -15,6 +15,10 @@ public class Produto {
     private int quantidade;
     private Double preco;
 
+    public Long getId() {
+        return id;
+    }
+
     public int getQuantidade() {
         return quantidade;
     }
